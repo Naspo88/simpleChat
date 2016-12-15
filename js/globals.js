@@ -18,7 +18,7 @@ var botAnswers = {
 		message: "Really good thanks! What about you?"
 	},
 	3: {
-		userTxt: ["What’s new?", "What’s up?", "What’s going on?"],
+		userTxt: ["What's new?", "What's up?", "What's going on?"],
 		message: "Nothing new... trying to move to UK!"
 	},
 	4: {
