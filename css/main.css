@@ -1,0 +1,113 @@
+/* general */
+body {
+	margin: 0;
+	background: #f6f6f6;
+	font-family: sans-serif;
+	font-size: 14px;
+	z-index: 0;
+}
+
+header {
+	text-align: center;
+	width: 70%;
+	margin: auto;
+}
+
+span {
+	display: inline-block;
+}
+
+textarea {
+	position: absolute;
+	resize: none;
+	width: 80%;
+	height: 30px;
+	border: 1px #c5c5c5 solid;
+	border-radius: 5px;
+	padding: 3px 5px;
+	left: 0px;
+}
+
+textarea:focus {
+	border: 1px #c5c5c5 solid;
+	outline: none;
+}
+
+input[type=button] {
+	position: absolute;
+	width: 18%;
+	border: 1px #c5c5c5 solid;
+	border-radius: 5px;
+	height: 36px;
+	right: 0px;
+	background: #4080ff;
+}
+
+input[type=button]:hover {
+	background: #94b8ff;
+	cursor: pointer;
+}
+
+.container {
+	position: relative;
+	border: 1px #c5c5c5 solid;
+	border-radius: 5px;
+	background: #ffffff;
+	width: 72%;
+	height: 300px;
+	margin: 25px auto 10px auto;
+	overflow-y: scroll;
+}
+
+.form {
+	position: relative;
+	width: 72%;
+	margin: 0px auto;
+}
+
+.message {
+	margin-top: 3px;
+	border-radius: 5px;
+	width: 50%;
+	padding: 3px 9px;
+}
+
+.message:last-child {
+	margin-bottom: 8px;
+}
+
+.message:first-child {
+	margin-top: 8px;
+}
+
+.mine {
+	margin-right: 10px;
+	margin-left: auto;
+	background: #4080ff;
+	text-align: right;
+}
+
+.bot {
+	margin-right: auto;
+	margin-left: 10px;
+	background: #f1f0f0;
+	text-align: left;
+}
+
+.userdata {
+	font-size: 18px;
+	color: black;
+}
+
+.user {
+	font-weight: bold;
+}
+
+.data {
+	font-size: 14px !important;
+}
+
+.text {
+	margin: 3px auto;
+	font-size: 16px;
+}
