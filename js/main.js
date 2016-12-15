@@ -51,6 +51,8 @@ window.onload = function () {
 			pageElem.container.append(template);
 
 			pageElem.textarea.val("");
+			
+			pageElem.container.scrollTop( pageElem.container.prop("scrollHeight") );
 
 			if (!bot)
 				checkBot(text);
