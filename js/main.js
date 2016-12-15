@@ -52,7 +52,8 @@ window.onload = function () {
 
 			pageElem.textarea.val("");
 
-			checkBot(text);
+			if (!bot)
+				checkBot(text);
 		}
 	};
 

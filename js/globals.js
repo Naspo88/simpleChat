@@ -7,7 +7,7 @@ var datas = {
 var botAnswers = {
 	0: {
 		userTxt: ["init"],
-		message: "Welcome to this simple chat.\nYou can send your message pressing ENTER or the SUBMIT buttton.\nIf you need a new line for your message you have to press SHIFT + ENTER.\nI create a little bot that can simulate me on this conversation answering some of your questions! Hope you will enjoy it.\nRoberto"
+		message: "Welcome to this simple chat.\nYou can send your message pressing ENTER or the SUBMIT buttton.\nIf you need a new line for your message you have to press SHIFT + ENTER.\nI created a little bot that can simulate me on this conversation answering some of your questions! Hope you will enjoy it.\nRoberto"
 	},
 	1: {
 		userTxt: ["Hello", "Hello!", "Hi"],
@@ -27,7 +27,7 @@ var botAnswers = {
 	},
 	5: {
 		userTxt: ["test"],
-		message: "Good now try to test my bot with some question like that:\n'Hello'\n'How are you?'\n'What’s new?'\n'Funny project'"
+		message: "It's working!\nNow try to test my bot with some question like:\n'Hello'\n'How are you?'\n'What’s new?'\n'Funny project'"
 	}
 };
 
