@@ -51,6 +51,8 @@ window.onload = function () {
 			pageElem.container.append(template);
 
 			pageElem.textarea.val("");
+
+			checkBot(text);
 		}
 	};
 
