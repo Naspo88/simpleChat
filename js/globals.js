@@ -4,6 +4,13 @@ var datas = {
 	}
 };
 
+var botAnswers = {
+	0: {
+		userTxt: "init",
+		message: "Welcome to this simple chat.\nYou can send your message pressing ENTER or the SUBMIT buttton.\nIf you need a new line for your message you have to press SHIFT + ENTER.\nI create a little bot that can simulate me on this conversation answering some of your questions! Hope you will enjoy it.\nRoberto"
+	}
+};
+
 var globalFn = {
 	templateParser: function (skin, obj) {
 		$.each(obj, function (id, value) {
@@ -11,6 +18,21 @@ var globalFn = {
 		});
 
 		return skin;
+	},
+	formatText: function (txt) {
+		return txt.replace(/(?:\r\n|\r|\n)/g, "<br/>");
+	},
+	getBotMessage: function (txt) {
+		var result = "";
+
+		$.each(botAnswers, function (id, val) {
+			if (val.userTxt == txt) {
+				result = val.message;
+				return false;
+			}
+		});
+
+		return result;
 	},
 	getUrl: function (url, cb) {
 		$.ajax({

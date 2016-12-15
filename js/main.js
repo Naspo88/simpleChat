@@ -33,18 +33,16 @@ window.onload = function () {
 	};
 
 	// Manage the new message to chat
-	var sendMessage = function () {
-		var text = pageElem.textarea.val();
-
+	var sendMessage = function (text, bot) {
 		if (!text) {
 			alert("You have to write something to send a message");
 		} else {
 			var newd = new Date(),
 				template = templates.msg,
 				data = {
-					type: "mine",
-					user: "Me",
-					txt: text,
+					type: (!bot) ? "mine" : "bot",
+					user: (!bot) ? "Me" : "Roberto Minghi",
+					txt: globalFn.formatText(text),
 					when: globalFn.formatDate(newd)
 				};
 
@@ -56,13 +54,35 @@ window.onload = function () {
 		}
 	};
 
+	// Check if there is a standard message from the bot and print it if yes
+	var checkBot = function (txt) {
+		var botTxt = globalFn.getBotMessage(txt);
+
+		if (botTxt) {
+			sendMessage(botTxt, true);
+		}
+	};
+
 	// Manager of the page init after preparation
 	var init = function () {
 		elemInit();
 
 		pageElem.input.click(function () {
-			sendMessage();
+			var text = pageElem.textarea.val();
+			sendMessage(text, false);
 		});
+
+		pageElem.textarea.keypress(function (e) {
+			if (e.which == 13) {
+				if (!e.shiftKey) {
+					e.preventDefault();
+					var text = pageElem.textarea.val();
+					sendMessage(text, false);
+				}
+			}
+		});
+
+		checkBot("init");
 
 	};
 	/* End functions */
